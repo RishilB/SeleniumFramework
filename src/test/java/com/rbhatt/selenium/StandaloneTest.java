@@ -1,18 +1,52 @@
 package com.rbhatt.selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StandaloneTest {
     public static void main(String[] args){
+
+        String productName = "ZARA COAT 3";
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
 
         // 1. Perform Login
         driver.get("https://rahulshettyacademy.com/client");
+        driver.findElement(By.id("userEmail")).sendKeys("risshilbhatt@gmail.com");
+        driver.findElement(By.id("userPassword")).sendKeys("Test@123");
+        driver.findElement(By.id("login")).click();
+
+        //2. Get all Product Names
+        List<WebElement> productNames = driver.findElements(By.className("card-body"));
+        WebElement prod = productNames.stream().filter(product ->
+                product.getText().contains(productName)).findAny().orElse(null);
+        prod.findElement(By.xpath("button[contains(.,'Add To Cart')]")).click();
+
+        //3. Apply explicit wait for the Toast visibility & click on Cart Link from header
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
+        driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
+
+        //4. Check the Added Product is there in the Cart listing page
+        List<WebElement> cartProductsElements = driver.findElements(By.xpath("//div[@class='cartSection']/h3"));
+        boolean isAvailable = cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
+        Assert.assertTrue(isAvailable);
+        driver.findElement(By.cssSelector("li[class='totalRow'] button[type='button']")).click();
     }
 }
