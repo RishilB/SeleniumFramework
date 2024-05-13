@@ -5,11 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import javax.swing.*;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -48,5 +50,23 @@ public class StandaloneTest {
         boolean isAvailable = cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
         Assert.assertTrue(isAvailable);
         driver.findElement(By.cssSelector("li[class='totalRow'] button[type='button']")).click();
+        
+        //5. Place Order
+        driver.findElement(By.xpath("//div/input[@placeholder='Select Country']")).sendKeys("Ind");
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='form-group']/section"))));
+        List<WebElement> countries = driver.findElements(By.xpath("//div[@class='form-group']/section/button"));
+        for(WebElement country : countries){
+            if(country.getText().equalsIgnoreCase("Indonesia")){
+                country.click();
+                break;
+            }
+        }
+        driver.findElement(By.xpath("//div[@class='actions']/a")).click();
+        
+        //6. Assert Confirmation Message
+        String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
+        System.out.println(confirmMessage);
+        Assert.assertTrue(confirmMessage.contains("THANKYOU"));
+        driver.quit();
     }
 }
