@@ -1,6 +1,8 @@
 package com.rbhatt.selenium;
 
+import com.rbhatt.selenium.AbstractCompoments.AbstractComponent;
 import com.rbhatt.selenium.PageObjects.LandingPage;
+import com.rbhatt.selenium.PageObjects.ProductCatalouge;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +15,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
-public class StandaloneTest {
+public class StandaloneTest1 {
     public static void main(String[] args){
 
         String productName = "ZARA COAT 3";
@@ -23,23 +25,19 @@ public class StandaloneTest {
         driver.manage().window().maximize();
 
         // 1. Perform Login
-        driver.get("https://rahulshettyacademy.com/client");
         LandingPage landingPage = new LandingPage(driver);
-        driver.findElement(By.id("userEmail")).sendKeys("risshilbhatt@gmail.com");
-        driver.findElement(By.id("userPassword")).sendKeys("Test@123");
-        driver.findElement(By.id("login")).click();
-
+        landingPage.goTo("https://rahulshettyacademy.com/client");
+        landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
         //2. Get all Product Names
-        List<WebElement> productNames = driver.findElements(By.className("card-body"));
-        WebElement prod = productNames.stream().filter(product ->
-                product.getText().contains(productName)).findAny().orElse(null);
-        prod.findElement(By.xpath("button[contains(.,'Add To Cart')]")).click();
-
+        ProductCatalouge productCatalouge = new ProductCatalouge(driver);
+        List<WebElement> productNames = productCatalouge.getProductList();
+        WebElement prod = productCatalouge.getProductByName(productName);
+        productCatalouge.addToCart(prod);
         //3. Apply explicit wait for the Toast visibility & click on Cart Link from header
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
-        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
-        driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
+        productCatalouge.goToCart();
+        
+        
+        
 
         //4. Check the Added Product is there in the Cart listing page
         List<WebElement> cartProductsElements = driver.findElements(By.xpath("//div[@class='cartSection']/h3"));
