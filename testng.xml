@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium_Framework_Automation_Suite" verbose="1">
+    <test name="Submit Product Order Test">
+        <classes>
+            <class name="com.rbhatt.selenium.tests.StandaloneTestPO"/>
+        </classes>
+    </test>
+    <test name="Error Validations">
+        <classes>
+            <class name="com.rbhatt.selenium.tests.ErrorValidationsTest"/>
+        </classes>
+    </test>
+</suite>

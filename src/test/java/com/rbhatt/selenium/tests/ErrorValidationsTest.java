@@ -6,10 +6,10 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class ErrorValidations extends BaseTest {
+public class ErrorValidationsTest extends BaseTest {
 	
 	@Test
-	public void standaloneTest() throws IOException {
+	public void LoginErrorValidation() throws IOException {
 		
 		//1. Perform Login with incorrect Password
 		landingPage.loginAction("risshilbhatt@gmail.com", "Test@1234");
