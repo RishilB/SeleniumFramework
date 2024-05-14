@@ -1,7 +1,9 @@
 package com.rbhatt.selenium;
 
 import com.rbhatt.selenium.AbstractCompoments.AbstractComponent;
+import com.rbhatt.selenium.PageObjects.CartPage;
 import com.rbhatt.selenium.PageObjects.LandingPage;
+import com.rbhatt.selenium.PageObjects.PlaceOrder;
 import com.rbhatt.selenium.PageObjects.ProductCatalouge;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -35,27 +37,14 @@ public class StandaloneTest1 {
         productCatalouge.addToCart(prod);
         //3. Apply explicit wait for the Toast visibility & click on Cart Link from header
         productCatalouge.goToCart();
-        
-        
-        
-
         //4. Check the Added Product is there in the Cart listing page
-        List<WebElement> cartProductsElements = driver.findElements(By.xpath("//div[@class='cartSection']/h3"));
-        boolean isAvailable = cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
+        CartPage cartPage = new CartPage(driver);
+        Boolean isAvailable = cartPage.isProductAvailable(productName);
         Assert.assertTrue(isAvailable);
-        driver.findElement(By.cssSelector("li[class='totalRow'] button[type='button']")).click();
-        
+        cartPage.checkout();
         //5. Place Order
-        driver.findElement(By.xpath("//div/input[@placeholder='Select Country']")).sendKeys("Ind");
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='form-group']/section"))));
-        List<WebElement> countries = driver.findElements(By.xpath("//div[@class='form-group']/section/button"));
-        for(WebElement country : countries){
-            if(country.getText().equalsIgnoreCase("Indonesia")){
-                country.click();
-                break;
-            }
-        }
-        driver.findElement(By.xpath("//div[@class='actions']/a")).click();
+        PlaceOrder placeOrder = new PlaceOrder(driver);
+        placeOrder.placeOrder();
         
         //6. Assert Confirmation Message
         String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();

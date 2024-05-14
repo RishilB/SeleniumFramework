@@ -12,12 +12,10 @@ public class CartPage extends AbstractComponent {
 	
 	@FindBy(xpath = "//div[@class='cartSection']/h3")
 	List<WebElement> cartProductsElements;
-	
-	//List<WebElement> cartProductsElements = driver.findElements(By.xpath("//div[@class='cartSection']/h3"));
-	//boolean isAvailable = cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
-	//Assert.assertTrue(isAvailable);
-    //driver.findElement(By.cssSelector("li[class='totalRow'] button[type='button']")).click();
-	
+
+	@FindBy(css = "li[class='totalRow'] button[type='button']")
+	WebElement checkoutBtn;
+
 	WebDriver driver;
 	public CartPage(WebDriver driver){
 		super(driver);
@@ -26,8 +24,11 @@ public class CartPage extends AbstractComponent {
 	}
 
 	
-	public Boolean isProductAvailable(List<WebElement> cartProductsElements, String productName){
-		boolean isAvailable = cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
-		return isAvailable;
+	public Boolean isProductAvailable(String productName){
+        return cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
+	}
+
+	public void checkout(){
+		checkoutBtn.click();
 	}
 }
