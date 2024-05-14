@@ -1,4 +1,4 @@
-package com.rbhatt.selenium;
+package com.rbhatt.selenium.tests;
 
 import com.rbhatt.selenium.PageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;

@@ -1,23 +1,19 @@
-package com.rbhatt.selenium;
+package com.rbhatt.selenium.tests;
 
-import com.rbhatt.selenium.AbstractCompoments.AbstractComponent;
 import com.rbhatt.selenium.PageObjects.CartPage;
 import com.rbhatt.selenium.PageObjects.LandingPage;
 import com.rbhatt.selenium.PageObjects.PlaceOrder;
 import com.rbhatt.selenium.PageObjects.ProductCatalouge;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
 
-public class StandaloneTest1 {
+public class StandaloneTestPO {
     public static void main(String[] args){
 
         String productName = "ZARA COAT 3";
