@@ -16,6 +16,9 @@ public class LandingPage extends AbstractComponent {
 	@FindBy(id="login")
 	WebElement loginBtnEle;
 	
+	@FindBy(css="div[aria-label*='Incorrect']")
+	WebElement errorMessageEle;
+	
 	WebDriver driver;
 	public LandingPage(WebDriver driver){
 		super(driver);
@@ -23,8 +26,8 @@ public class LandingPage extends AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void goTo(String URL){
-		driver.get(URL);
+	public void goTo(){
+		driver.get("https://rahulshettyacademy.com/client");
 	}
 	
 	public ProductCatalouge loginAction(String email, String password){
@@ -33,10 +36,10 @@ public class LandingPage extends AbstractComponent {
 		loginBtnEle.click();
 		ProductCatalouge productCatalouge = new ProductCatalouge(driver);
 		return productCatalouge;
-		
 	}
 	
-
-	
-	
+	public String getLoginErrorMessage(){
+		waitForWebElementToVisible(errorMessageEle);
+		return errorMessageEle.getText();
+	}
 }

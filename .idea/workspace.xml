@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StandaloneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StandaloneTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/AbstractCompoments/AbstractComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/AbstractCompoments/AbstractComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/LandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,9 @@
     "Application.StandaloneTestPO.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.ErrorValidations.executor": "Run",
+    "TestNG.StandaloneTestPO.executor": "Debug",
+    "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/rissh/IdeaProjects/SeleniumFramework",
@@ -68,7 +73,7 @@
       <recent name="com.rbhatt.selenium" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StandaloneTestPO">
+  <component name="RunManager" selected="TestNG.ErrorValidations">
     <configuration name="StandaloneTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.StandaloneTest" />
       <module name="SeleniumFramework" />
@@ -95,8 +100,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ErrorValidations" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.ErrorValidations" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StandaloneTestPO" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.StandaloneTestPO" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StandaloneTestPO.standaloneTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.StandaloneTestPO" />
+      <option name="METHOD_NAME" value="standaloneTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ErrorValidations" />
+        <item itemvalue="TestNG.StandaloneTestPO" />
+        <item itemvalue="TestNG.StandaloneTestPO.standaloneTest" />
         <item itemvalue="Application.StandaloneTestPO" />
         <item itemvalue="Application.StandaloneTest" />
       </list>

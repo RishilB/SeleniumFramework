@@ -4,27 +4,26 @@ import com.rbhatt.selenium.PageObjects.CartPage;
 import com.rbhatt.selenium.PageObjects.LandingPage;
 import com.rbhatt.selenium.PageObjects.PlaceOrder;
 import com.rbhatt.selenium.PageObjects.ProductCatalouge;
+import com.rbhatt.selenium.TestComponents.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
-public class StandaloneTestPO {
-    public static void main(String[] args){
+public class StandaloneTestPO extends BaseTest {
+    
+    @Test
+    public void standaloneTest() throws IOException {
 
         String productName = "ZARA COAT 3";
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
 
         //1. Perform Login
-        LandingPage landingPage = new LandingPage(driver);
-        landingPage.goTo("https://rahulshettyacademy.com/client");
         ProductCatalouge productCatalouge = landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
         
         //2. Get all Product Names
@@ -46,6 +45,5 @@ public class StandaloneTestPO {
         //6. Assert Confirmation Message
         String confirmMessage = placeOrder.getConfirmationMessage();
         Assert.assertTrue(confirmMessage.contains("THANKYOU"));
-        driver.quit();
     }
 }
