@@ -26,29 +26,29 @@ public class StandaloneTest1 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
-        // 1. Perform Login
+        //1. Perform Login
         LandingPage landingPage = new LandingPage(driver);
         landingPage.goTo("https://rahulshettyacademy.com/client");
-        landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
+        ProductCatalouge productCatalouge = landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
+        
         //2. Get all Product Names
-        ProductCatalouge productCatalouge = new ProductCatalouge(driver);
         List<WebElement> productNames = productCatalouge.getProductList();
         WebElement prod = productCatalouge.getProductByName(productName);
         productCatalouge.addToCart(prod);
+        
         //3. Apply explicit wait for the Toast visibility & click on Cart Link from header
-        productCatalouge.goToCart();
+        CartPage cartPage = productCatalouge.goToCart();
+        
         //4. Check the Added Product is there in the Cart listing page
-        CartPage cartPage = new CartPage(driver);
         Boolean isAvailable = cartPage.isProductAvailable(productName);
         Assert.assertTrue(isAvailable);
-        cartPage.checkout();
+        PlaceOrder placeOrder = cartPage.checkout();
+        
         //5. Place Order
-        PlaceOrder placeOrder = new PlaceOrder(driver);
         placeOrder.placeOrder();
         
         //6. Assert Confirmation Message
-        String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
-        System.out.println(confirmMessage);
+        String confirmMessage = placeOrder.getConfirmationMessage();
         Assert.assertTrue(confirmMessage.contains("THANKYOU"));
         driver.quit();
     }

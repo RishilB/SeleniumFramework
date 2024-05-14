@@ -28,7 +28,8 @@ public class CartPage extends AbstractComponent {
         return cartProductsElements.stream().anyMatch(product -> product.getText().contains(productName));
 	}
 
-	public void checkout(){
+	public PlaceOrder checkout(){
 		checkoutBtn.click();
+		return new PlaceOrder(driver);
 	}
 }

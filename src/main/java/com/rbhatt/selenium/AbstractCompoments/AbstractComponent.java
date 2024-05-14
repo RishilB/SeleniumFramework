@@ -1,5 +1,6 @@
 package com.rbhatt.selenium.AbstractCompoments;
 
+import com.rbhatt.selenium.PageObjects.CartPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,8 +32,9 @@ public class AbstractComponent{
 		waitForElementDisappear.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
 	}
 	
-	public void goToCart(){
+	public CartPage goToCart(){
 		goToCartBtn.click();
+		return new CartPage(driver);
 	}
 	
 
