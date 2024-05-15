@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 
 public class StandaloneTestPO extends BaseTest {
@@ -20,23 +21,23 @@ public class StandaloneTestPO extends BaseTest {
     String orderID;
     
     @Test(dataProvider = "getData",groups = {"PurchaseOrder"})
-    public void submitOrder(String email, String password, String productName) throws IOException {
+    public void submitOrder(HashMap<String,String> input) throws IOException {
 
         //String productName = "ZARA COAT 3";
 
         //1. Perform Login
-        ProductCatalouge productCatalouge = landingPage.loginAction(email, password);
+        ProductCatalouge productCatalouge = landingPage.loginAction(input.get("email"), input.get("password"));
         
         //2. Get all Product Names
         List<WebElement> productNames = productCatalouge.getProductList();
-        WebElement prod = productCatalouge.getProductByName(productName);
+        WebElement prod = productCatalouge.getProductByName(input.get("product"));
         productCatalouge.addToCart(prod);
         
         //3. Apply explicit wait for the Toast visibility & click on Cart Link from header
         CartPage cartPage = productCatalouge.goToCart();
         
         //4. Check the Added Product is there in the Cart listing page
-        Boolean isAvailable = cartPage.isProductAvailable(productName);
+        Boolean isAvailable = cartPage.isProductAvailable(input.get("product"));
         Assert.assertTrue(isAvailable);
         PlaceOrder placeOrder = cartPage.checkout();
         
@@ -63,6 +64,14 @@ public class StandaloneTestPO extends BaseTest {
     
     @DataProvider
     public Object[][] getData(){
-        return new Object[][] {{"risshilbhatt@gmail.com","Test@123","ZARA COAT 3"},{"anishka@gmail.com","Iamking@000","ADIDAS ORIGINAL"}};
+        HashMap<String,String> map1 = new HashMap<String,String>();
+        map1.put("email","risshilbhatt@gmail.com");
+        map1.put("password","Test@123");
+        map1.put("product","ZARA COAT 3");
+        HashMap<String,String> map2 = new HashMap<String,String>();
+        map2.put("email","anishka@gmail.com");
+        map2.put("password","Iamking@000");
+        map2.put("product","ADIDAS ORIGINAL");
+        return new Object[][] {{map1},{map2}};
     }
 }
