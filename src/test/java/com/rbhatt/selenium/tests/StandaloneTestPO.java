@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -18,13 +19,13 @@ public class StandaloneTestPO extends BaseTest {
     
     String orderID;
     
-    @Test
-    public void submitOrder() throws IOException {
+    @Test(dataProvider = "getData",groups = {"PurchaseOrder"})
+    public void submitOrder(String email, String password, String productName) throws IOException {
 
-        String productName = "ZARA COAT 3";
+        //String productName = "ZARA COAT 3";
 
         //1. Perform Login
-        ProductCatalouge productCatalouge = landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
+        ProductCatalouge productCatalouge = landingPage.loginAction(email, password);
         
         //2. Get all Product Names
         List<WebElement> productNames = productCatalouge.getProductList();
@@ -58,5 +59,10 @@ public class StandaloneTestPO extends BaseTest {
         OrdersHistory ordersHistory = landingPage.goToOrderHistory();
         Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);
         Assert.assertTrue(isOrderAvailable);
+    }
+    
+    @DataProvider
+    public Object[][] getData(){
+        return new Object[][] {{"risshilbhatt@gmail.com","Test@123","ZARA COAT 3"},{"anishka@gmail.com","Iamking@000","ADIDAS ORIGINAL"}};
     }
 }

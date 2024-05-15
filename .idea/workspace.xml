@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/AbstractCompoments/AbstractComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/AbstractCompoments/AbstractComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/PlaceOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/PlaceOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/ErrorValidationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/ErrorValidationsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +55,7 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor": "Run",
     "TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor": "Run",
     "TestNG.ErrorValidations.executor": "Run",
     "TestNG.ErrorValidationsTest.executor": "Run",
@@ -84,7 +81,7 @@
       <recent name="com.rbhatt.selenium" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml">
+  <component name="RunManager" selected="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml">
     <configuration name="D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/ErrorValidations.xml" />
@@ -95,9 +92,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Trainings/SeleniumFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -159,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml" />
         <item itemvalue="TestNG.ErrorValidationsTest" />
         <item itemvalue="TestNG.StandaloneTestPO" />
         <item itemvalue="TestNG.StandaloneTestPO.submitOrder" />
-        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
       </list>
     </recent_temporary>
   </component>
