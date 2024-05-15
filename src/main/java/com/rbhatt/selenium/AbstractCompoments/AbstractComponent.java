@@ -1,6 +1,7 @@
 package com.rbhatt.selenium.AbstractCompoments;
 
 import com.rbhatt.selenium.PageObjects.CartPage;
+import com.rbhatt.selenium.PageObjects.OrdersHistory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,9 @@ public class AbstractComponent{
 	
 	@FindBy(css = "[routerlink*='cart']")
 	WebElement goToCartBtn;
+	
+	@FindBy(xpath = "//button[@routerlink='/dashboard/myorders']")
+	WebElement goToOrdersHistoryBtn;
 	
 	WebDriver driver;
 	public AbstractComponent(WebDriver driver) {
@@ -40,6 +44,11 @@ public class AbstractComponent{
 	public CartPage goToCart(){
 		goToCartBtn.click();
 		return new CartPage(driver);
+	}
+	
+	public OrdersHistory goToOrderHistory(){
+		goToOrdersHistoryBtn.click();
+		return new OrdersHistory(driver);
 	}
 	
 

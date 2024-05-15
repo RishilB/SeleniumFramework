@@ -1,11 +1,9 @@
 package com.rbhatt.selenium.tests;
 
-import com.rbhatt.selenium.PageObjects.CartPage;
-import com.rbhatt.selenium.PageObjects.LandingPage;
-import com.rbhatt.selenium.PageObjects.PlaceOrder;
-import com.rbhatt.selenium.PageObjects.ProductCatalouge;
+import com.rbhatt.selenium.PageObjects.*;
 import com.rbhatt.selenium.TestComponents.BaseTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,8 +16,10 @@ import java.util.List;
 
 public class StandaloneTestPO extends BaseTest {
     
+    String orderID;
+    
     @Test
-    public void standaloneTest() throws IOException {
+    public void submitOrder() throws IOException {
 
         String productName = "ZARA COAT 3";
 
@@ -45,5 +45,18 @@ public class StandaloneTestPO extends BaseTest {
         //6. Assert Confirmation Message
         String confirmMessage = placeOrder.getConfirmationMessage();
         Assert.assertTrue(confirmMessage.contains("THANKYOU"));
+        
+        //7. Get Order ID
+        orderID = placeOrder.getOrderID();
+    }
+    
+    @Test(dependsOnMethods = {"submitOrder"})
+    public void orderHistoryPage(){
+        //1. Perform Login
+        landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
+        // Go to Order History Page
+        OrdersHistory ordersHistory = landingPage.goToOrderHistory();
+        Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);
+        Assert.assertTrue(isOrderAvailable);
     }
 }

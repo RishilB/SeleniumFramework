@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class ErrorValidationsTest extends BaseTest {
 	
-	@Test
+	@Test(groups = {"ErrorHandling"})
 	public void LoginErrorValidation() throws IOException {
 		
 		//1. Perform Login with incorrect Password

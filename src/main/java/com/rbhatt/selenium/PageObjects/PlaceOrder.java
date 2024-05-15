@@ -24,6 +24,9 @@ public class PlaceOrder extends AbstractComponent {
 
     @FindBy(css = ".hero-primary")
     WebElement confirmationMessageEle;
+    
+    @FindBy(xpath = "//label[@class='ng-star-inserted']")
+    WebElement orderIDEle;
 
     WebDriver driver;
     public PlaceOrder(WebDriver driver){
@@ -46,5 +49,10 @@ public class PlaceOrder extends AbstractComponent {
 
     public String getConfirmationMessage(){
         return confirmationMessageEle.getText();
+    }
+    
+    public String getOrderID(){
+        // Get the Order ID from Thank You Page.
+	    return orderIDEle.getText().trim().replace("|","").trim();
     }
 }
