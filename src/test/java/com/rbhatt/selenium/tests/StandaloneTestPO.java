@@ -63,15 +63,8 @@ public class StandaloneTestPO extends BaseTest {
     }
     
     @DataProvider
-    public Object[][] getData(){
-        HashMap<String,String> map1 = new HashMap<String,String>();
-        map1.put("email","risshilbhatt@gmail.com");
-        map1.put("password","Test@123");
-        map1.put("product","ZARA COAT 3");
-        HashMap<String,String> map2 = new HashMap<String,String>();
-        map2.put("email","anishka@gmail.com");
-        map2.put("password","Iamking@000");
-        map2.put("product","ADIDAS ORIGINAL");
-        return new Object[][] {{map1},{map2}};
+    public Object[][] getData() throws IOException {
+        List<HashMap<String,String>> data = getJsonDataToMap(System.getProperty("user.dir")+"//src//test//java//com//rbhatt//selenium//data//PurchaseOrder.json");
+        return new Object[][] {{data.get(0)},{data.get(1)}};
     }
 }
