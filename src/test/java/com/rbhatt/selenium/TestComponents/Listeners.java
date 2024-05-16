@@ -15,22 +15,23 @@ public class Listeners extends BaseTest implements ITestListener {
 	
 	ExtentReports extent = ExtentReporterNG.getReportObject();
 	ExtentTest test;
-	
+	ThreadLocal<ExtentTest> extentText = new ThreadLocal<ExtentTest>();
+
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("Test method started: " + result.getMethod().getMethodName());
 		test = extent.createTest(result.getMethod().getMethodName());
+		extentText.set(test); // Unique Thread ID
 	}
 	
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.log(Status.PASS, "Test method passed: " + result.getMethod().getMethodName());
+		extentText.get().log(Status.PASS, "Test method passed: " + result.getMethod().getMethodName());
 	}
 	
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test.log(Status.FAIL, "Test method failed: " + result.getMethod().getMethodName());
-		test.fail(result.getThrowable());
+		extentText.get().log(Status.FAIL, "Test method failed: " + result.getMethod().getMethodName());
+		extentText.get().fail(result.getThrowable());
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		} catch (Exception e) {
@@ -42,7 +43,7 @@ public class Listeners extends BaseTest implements ITestListener {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		test.addScreenCaptureFromPath(screenshotPath, result.getMethod().getMethodName());
+		extentText.get().addScreenCaptureFromPath(screenshotPath, result.getMethod().getMethodName());
 	}
 	
 	@Override

@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
-public abstract class BaseTest {
+public abstract class 	BaseTest {
 	
 	public WebDriver driver;
 	public LandingPage landingPage;
