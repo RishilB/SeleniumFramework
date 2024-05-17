@@ -50,6 +50,4 @@ public class AbstractComponent{
 		goToOrdersHistoryBtn.click();
 		return new OrdersHistory(driver);
 	}
-	
-
 }

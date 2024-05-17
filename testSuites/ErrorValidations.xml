@@ -5,11 +5,6 @@
             <include name="ErrorHandling"/>
         </run>
     </groups>
-    <test thread-count="5" name="Submit Product Order Test">
-        <classes>
-            <class name="com.rbhatt.selenium.tests.StandaloneTestPO"/>
-        </classes>
-    </test>
     <test thread-count="5" name="Error Validations">
         <classes>
             <class name="com.rbhatt.selenium.tests.ErrorValidationsTest"/>
