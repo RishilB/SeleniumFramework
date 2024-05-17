@@ -1,6 +1,7 @@
 package com.rbhatt.selenium.tests;
 
 import com.rbhatt.selenium.TestComponents.BaseTest;
+import com.rbhatt.selenium.TestComponents.Retry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,7 +9,7 @@ import java.io.IOException;
 
 public class ErrorValidationsTest extends BaseTest {
 	
-	@Test(groups = {"ErrorHandling"})
+	@Test(groups = {"ErrorHandling"},retryAnalyzer = Retry.class)
 	public void LoginErrorValidation() throws IOException {
 		
 		//1. Perform Login with incorrect Password

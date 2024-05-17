@@ -7,9 +7,11 @@ import com.rbhatt.selenium.resources.ExtentReporterNG;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
+import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
 import java.io.IOException;
+import java.util.Iterator;
 
 public class Listeners extends BaseTest implements ITestListener {
 	
@@ -48,11 +50,20 @@ public class Listeners extends BaseTest implements ITestListener {
 	
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		System.out.println("Test method skipped: " + result.getMethod().getMethodName());
+		extentText.get().log(Status.SKIP, "Test method skipped: " + result.getMethod().getMethodName());
 	}
 	
 	@Override
 	public void onFinish(ITestContext result) {
+		/*Iterator<ITestResult> skippedTestCases = result.getSkippedTests().getAllResults().iterator();
+		
+		while (skippedTestCases.hasNext()) {
+			ITestResult skippedTestCase = skippedTestCases.next();
+			ITestNGMethod method = skippedTestCase.getMethod();
+			if (!result.getSkippedTests().getResults(method).isEmpty()) {
+				skippedTestCases.remove();
+			}
+		}*/
 		extent.flush();
 	}
 }

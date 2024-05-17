@@ -2,6 +2,7 @@ package com.rbhatt.selenium.tests;
 
 import com.rbhatt.selenium.PageObjects.*;
 import com.rbhatt.selenium.TestComponents.BaseTest;
+import com.rbhatt.selenium.TestComponents.Retry;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.Assert;
@@ -17,7 +18,7 @@ public class StandaloneTestPO extends BaseTest {
     
     String orderID;
     
-    @Test(dataProvider = "getData",groups = {"PurchaseOrder"})
+    @Test(dataProvider = "getData",groups = {"PurchaseOrder"},retryAnalyzer = Retry.class)
     public void submitOrder(HashMap<String,String> input) throws IOException {
 
         //String productName = "ZARA COAT 3";
@@ -49,7 +50,7 @@ public class StandaloneTestPO extends BaseTest {
         orderID = placeOrder.getOrderID();
     }
     
-    @Test(dependsOnMethods = {"submitOrder"})
+    @Test(dependsOnMethods = {"submitOrder"},retryAnalyzer = Retry.class)
     public void orderHistoryPage(){
         //1. Perform Login
         landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");

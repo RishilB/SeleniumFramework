@@ -34,8 +34,7 @@ public class LandingPage extends AbstractComponent {
 		userEmailEle.sendKeys(email);
 		passwordEle.sendKeys(password);
 		loginBtnEle.click();
-		ProductCatalouge productCatalouge = new ProductCatalouge(driver);
-		return productCatalouge;
+		return new ProductCatalouge(driver);
 	}
 	
 	public String getLoginErrorMessage(){
