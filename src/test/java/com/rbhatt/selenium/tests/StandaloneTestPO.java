@@ -20,9 +20,7 @@ public class StandaloneTestPO extends BaseTest {
     
     @Test(dataProvider = "getData",groups = {"PurchaseOrder"},retryAnalyzer = Retry.class)
     public void submitOrder(HashMap<String,String> input) throws IOException {
-
-        //String productName = "ZARA COAT 3";
-
+        
         //1. Perform Login
         ProductCatalouge productCatalouge = landingPage.loginAction(input.get("email"), input.get("password"));
         
@@ -48,15 +46,17 @@ public class StandaloneTestPO extends BaseTest {
         
         //7. Get Order ID
         orderID = placeOrder.getOrderID();
+        System.out.println(input.get("email")+" "+orderID);
     }
     
-    @Test(dependsOnMethods = {"submitOrder"},retryAnalyzer = Retry.class)
-    public void orderHistoryPage(HashMap<String,String> input){
+    @Test(dataProvider = "getData",dependsOnMethods = "submitOrder", retryAnalyzer = Retry.class)
+    public void orderHistoryPage(HashMap<String,String> input) throws IOException {
         //1. Perform Login
-        landingPage.loginAction(input.get("email"), input.get("password"));
+        ProductCatalouge productCatalouge = landingPage.loginAction(input.get("email"), input.get("password"));
         // Go to Order History Page
-        OrdersHistory ordersHistory = landingPage.goToOrderHistory();
+        OrdersHistory ordersHistory = productCatalouge.goToOrderHistory();
         Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);
+        System.out.println(input.get("email")+" "+orderID+" "+isOrderAvailable);
         Assert.assertTrue(isOrderAvailable);
     }
     

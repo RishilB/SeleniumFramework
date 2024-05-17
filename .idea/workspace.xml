@@ -7,11 +7,9 @@
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/ExtentReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/ExtentReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/LoginErrorValidation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/submitOrder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/Listeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/Listeners.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testSuites/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testSuites/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,10 +156,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml" />
+        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
         <item itemvalue="TestNG.StandaloneTestPO" />
         <item itemvalue="TestNG.StandaloneTestPO.submitOrder" />
-        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
       </list>
     </recent_temporary>
   </component>

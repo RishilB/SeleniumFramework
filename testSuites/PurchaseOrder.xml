@@ -10,9 +10,4 @@
             <class name="com.rbhatt.selenium.tests.StandaloneTestPO"/>
         </classes>
     </test>
-    <test thread-count="5" name="Error Validations">
-        <classes>
-            <class name="com.rbhatt.selenium.tests.ErrorValidationsTest"/>
-        </classes>
-    </test>
 </suite>
