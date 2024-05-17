@@ -51,9 +51,9 @@ public class StandaloneTestPO extends BaseTest {
     }
     
     @Test(dependsOnMethods = {"submitOrder"},retryAnalyzer = Retry.class)
-    public void orderHistoryPage(){
+    public void orderHistoryPage(HashMap<String,String> input){
         //1. Perform Login
-        landingPage.loginAction("risshilbhatt@gmail.com", "Test@123");
+        landingPage.loginAction(input.get("email"), input.get("password"));
         // Go to Order History Page
         OrdersHistory ordersHistory = landingPage.goToOrderHistory();
         Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);

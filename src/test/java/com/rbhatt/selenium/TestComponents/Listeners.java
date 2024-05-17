@@ -55,15 +55,6 @@ public class Listeners extends BaseTest implements ITestListener {
 	
 	@Override
 	public void onFinish(ITestContext result) {
-		/*Iterator<ITestResult> skippedTestCases = result.getSkippedTests().getAllResults().iterator();
-		
-		while (skippedTestCases.hasNext()) {
-			ITestResult skippedTestCase = skippedTestCases.next();
-			ITestNGMethod method = skippedTestCase.getMethod();
-			if (!result.getSkippedTests().getResults(method).isEmpty()) {
-				skippedTestCases.remove();
-			}
-		}*/
 		extent.flush();
 	}
 }

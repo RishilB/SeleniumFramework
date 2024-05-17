@@ -67,8 +67,7 @@ public abstract class BaseTest {
 		
 		// Convert String to HashMap
 		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String,String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
-		return data;
+		return mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
 	}
 	
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
