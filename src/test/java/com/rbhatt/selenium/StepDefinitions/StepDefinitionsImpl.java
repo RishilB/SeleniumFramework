@@ -30,6 +30,7 @@ public class StepDefinitionsImpl extends BaseTest {
 	public void I_Logged_in_with_email_and_password(String email, String password){
 		productCatalouge = landingPage.loginAction(email, password);
 	}
+
 	
 	@When("^I add product (.+) to the Cart$")
 	public void I_add_product_to_the_Cart(String product){
@@ -60,5 +61,10 @@ public class StepDefinitionsImpl extends BaseTest {
 		Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);
 		Assert.assertTrue(isOrderAvailable);
 		driver.quit();
+	}
+
+	@Then("^\"([^\"]*)\" message is displayed$")
+	public void Login_error_message_is_displayed(String errorMessage){
+		Assert.assertEquals(errorMessage,landingPage.getLoginErrorMessage());
 	}
 }
