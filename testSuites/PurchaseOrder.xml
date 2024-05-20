@@ -7,7 +7,7 @@
     </groups>
     <test thread-count="5" name="Submit Product Order Test">
         <classes>
-            <class name="com.rbhatt.selenium.tests.StandaloneTestPO"/>
+            <class name="com.rbhatt.selenium.tests.SubmitOrderTest"/>
         </classes>
     </test>
 </suite>

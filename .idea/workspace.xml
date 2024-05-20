@@ -7,7 +7,8 @@
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExtentReports/ExtentReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/ExtentReports/ExtentReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/StandaloneTestPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/SubmitOrderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testSuites/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testSuites/testng.xml" afterDir="false" />
     </list>
@@ -66,13 +67,14 @@
     "TestNG.StandaloneTestPO.orderHistoryPage.executor": "Debug",
     "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
     "TestNG.StandaloneTestPO.submitOrder.executor": "Run",
+    "TestNG.TestNGTestRunner.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Trainings/SeleniumFramework/testSuites",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,7 +89,7 @@
       <recent name="com.rbhatt.selenium" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml">
+  <component name="RunManager" selected="TestNG.TestNGTestRunner">
     <configuration name="D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" />
@@ -118,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandaloneTestPO" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SubmitOrderTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <extension name="coverage">
         <pattern>
@@ -127,7 +129,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.StandaloneTestPO" />
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.SubmitOrderTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -135,18 +137,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StandaloneTestPO.submitOrder" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNGTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
+          <option name="PATTERN" value="cucumber.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.StandaloneTestPO" />
-      <option name="METHOD_NAME" value="submitOrder" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="cucumber" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.TestNGTestRunner" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -155,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestNGTestRunner" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
-        <item itemvalue="TestNG.StandaloneTestPO" />
-        <item itemvalue="TestNG.StandaloneTestPO.submitOrder" />
+        <item itemvalue="TestNG.SubmitOrderTest" />
       </list>
     </recent_temporary>
   </component>

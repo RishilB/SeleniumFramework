@@ -3,18 +3,16 @@ package com.rbhatt.selenium.tests;
 import com.rbhatt.selenium.PageObjects.*;
 import com.rbhatt.selenium.TestComponents.BaseTest;
 import com.rbhatt.selenium.TestComponents.Retry;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-public class StandaloneTestPO extends BaseTest {
+public class SubmitOrderTest extends BaseTest {
     
     String orderID;
     
