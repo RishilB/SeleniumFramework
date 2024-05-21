@@ -7,6 +7,6 @@ import io.cucumber.testng.CucumberOptions;
 		glue = "com.rbhatt.selenium.StepDefinitions",
 		monochrome = true,
 		tags = "@Regression",
-		plugin={"html:target/cucumber.html"})
+		plugin = {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
 }
