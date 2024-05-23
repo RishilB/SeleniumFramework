@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +66,7 @@
     &quot;TestNG.StandaloneTestPO.standaloneTest.executor&quot;: &quot;Debug&quot;,
     &quot;TestNG.StandaloneTestPO.submitOrder.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.TestNGTestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SF__01__Allure__Report&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Trainings/SeleniumFramework/testSuites&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
