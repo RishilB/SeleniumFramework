@@ -7,7 +7,28 @@
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/087cee2c-7fa4-4ff0-b58b-277b1af580fb-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/220e9700-488d-46ff-a0fc-5ae76f71de07-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/25d97789-373b-4e17-8762-5f07f8fb0bb1-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/37efc25d-fc3d-4fa6-88d0-148af6eb96ea-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/40428159-e97d-4d67-a018-3644b1049c62-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4502a87a-9705-44c7-addd-ddb13029cfe6-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/53600479-213a-4db6-9e3c-c3fe2b13a1f4-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/53b7bb9d-3f71-4d6c-bede-2bf8b4c7f3eb-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5717713b-8e25-4dbe-b0aa-5b23ec0a6b4c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/59e80b79-ecc8-4f69-ad56-ea8da160a3cc-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/694dfecb-08a4-4808-9a9f-db82d069dd5d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/7057163a-ac85-483a-a13c-42386e202b3a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/70fdd5f0-787e-44c6-9cde-4d42ca4943da-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/84c09094-d32d-4033-9b4b-ae6bcc410bff-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a2fdd545-6c5c-422b-8a19-c3d832eb8110-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b304b006-4dfb-4ccb-9231-89414d353651-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c6d44e7b-00ae-4b5b-9c86-064131c8b293-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d152714f-234e-497c-843a-93fe1cb824e5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f1bdcdb9-e1b1-4146-b0c2-f9f9d7b206f4-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f5f4f8b1-1c8c-46a3-89b2-3710aaa6b558-result.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +52,15 @@
     &quot;assignee&quot;: &quot;RishilB&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/RishilB/SeleniumFramework&quot;,
-    &quot;accountId&quot;: &quot;c0f66e21-4b10-4a59-b2f7-94ba5c648cc6&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/RishilB/SeleniumFramework.git",
+    "accountId": "5acd7602-c891-473f-abfd-8ba487adb812"
   }
-}</component>
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -48,37 +72,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.StandaloneTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTest1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidations.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidationsTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.orderHistoryPage.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.standaloneTest.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.submitOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestNGTestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SF__01__Allure__Report&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Trainings/SeleniumFramework/testSuites&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.StandaloneTest.executor": "Run",
+    "Application.StandaloneTest1.executor": "Run",
+    "Application.StandaloneTestPO.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor": "Run",
+    "TestNG.ErrorValidations.executor": "Run",
+    "TestNG.ErrorValidationsTest.executor": "Run",
+    "TestNG.StandaloneTestPO.executor": "Run",
+    "TestNG.StandaloneTestPO.orderHistoryPage.executor": "Debug",
+    "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
+    "TestNG.StandaloneTestPO.submitOrder.executor": "Run",
+    "TestNG.TestNGTestRunner.executor": "Run",
+    "git-widget-placeholder": "SF__01__Allure__Report",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Trainings/SeleniumFramework",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Trainings\SeleniumFramework\testSuites" />
       <recent name="D:\Trainings\SeleniumFramework" />
+      <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
@@ -172,5 +196,8 @@
       <updated>1715362963232</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

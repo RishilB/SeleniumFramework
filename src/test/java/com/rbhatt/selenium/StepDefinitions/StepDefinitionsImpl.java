@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -22,17 +23,20 @@ public class StepDefinitionsImpl extends BaseTest {
 	String orderID;
 	
 	@Given("I landed on the Ecommerce Page")
+	@Step("Navigate to the Ecommerce Login Page")
 	public void I_landed_on_the_Ecommerce_Page() throws IOException {
 		landingPage = launchApplication();
 	}
 	
 	@Given("^I Logged in with email (.+) and password (.+)$")
+	@Step("Login with valid credentials")
 	public void I_Logged_in_with_email_and_password(String email, String password){
 		productCatalouge = landingPage.loginAction(email, password);
 	}
 
 	
 	@When("^I add product (.+) to the Cart$")
+	@Step("Add Product to the Cart")
 	public void I_add_product_to_the_Cart(String product){
 		List<WebElement> productNames = productCatalouge.getProductList();
 		WebElement prod = productCatalouge.getProductByName(product);
@@ -40,6 +44,7 @@ public class StepDefinitionsImpl extends BaseTest {
 	}
 	
 	@And("^Checkout (.+) and submit the Order$")
+	@Step("Checkout Product & Submit Order")
 	public void Checkout_Product_and_submit_the_Order(String product){
 		cartPage = productCatalouge.goToCart();
 		Boolean isAvailable = cartPage.isProductAvailable(product);
@@ -49,6 +54,7 @@ public class StepDefinitionsImpl extends BaseTest {
 	}
 	
 	@Then("^(.+) message is displayed on Confirmation Page$")
+	@Step("Validate the Confirmation Message")
 	public void Confirmation_message_is_displayed_on_Confirmation_Page(String confirmationMessage){
 		String confirmMessage = placeOrder.getConfirmationMessage();
 		Assert.assertTrue(confirmMessage.contains(confirmationMessage));
@@ -56,6 +62,7 @@ public class StepDefinitionsImpl extends BaseTest {
 	}
 	
 	@And("I should see the Order on Order History Page")
+	@Step("Verify Order on the Order History Page")
 	public void I_should_see_the_Order_on_Order_History_Page(){
 		ordersHistory = productCatalouge.goToOrderHistory();
 		Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);
@@ -64,6 +71,7 @@ public class StepDefinitionsImpl extends BaseTest {
 	}
 
 	@Then("^\"([^\"]*)\" message is displayed$")
+	@Step("Verify Login Error message is displayed")
 	public void Login_error_message_is_displayed(String errorMessage){
 		Assert.assertEquals(errorMessage,landingPage.getLoginErrorMessage());
 	}
