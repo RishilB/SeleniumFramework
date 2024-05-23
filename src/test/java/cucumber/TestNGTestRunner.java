@@ -9,4 +9,5 @@ import io.cucumber.testng.CucumberOptions;
 		tags = "@Regression",
 		plugin={"html:target/cucumber.html"})
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
+
 }
