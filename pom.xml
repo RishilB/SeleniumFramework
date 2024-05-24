@@ -128,9 +128,12 @@
               <artifactId>maven-surefire-plugin</artifactId>
               <version>3.2.5</version>
               <configuration>
-                <includes>
-                  <include>**/TestNGTestRunner.java</include>
-                </includes>
+<!--                <includes>-->
+<!--                  <include>**/TestNGTestRunner.java</include>-->
+<!--                </includes>-->
+                <suiteXmlFiles>
+                  <suiteXmlFile>testSuites/testngCucumber.xml</suiteXmlFile>
+                </suiteXmlFiles>
                 <systemPropertyVariables>
                   <cucumber.filter.tags>@Regression</cucumber.filter.tags>
                 </systemPropertyVariables>

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/SubmitOrder.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/SubmitOrder.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,33 +54,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.StandaloneTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTest1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidations.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidationsTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.orderHistoryPage.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.standaloneTest.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.submitOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestNGTestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Trainings/SeleniumFramework/testSuites&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.StandaloneTest.executor": "Run",
+    "Application.StandaloneTest1.executor": "Run",
+    "Application.StandaloneTestPO.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/testngCucumber.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor": "Run",
+    "TestNG.ErrorValidations.executor": "Run",
+    "TestNG.ErrorValidationsTest.executor": "Run",
+    "TestNG.StandaloneTestPO.executor": "Run",
+    "TestNG.StandaloneTestPO.orderHistoryPage.executor": "Debug",
+    "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
+    "TestNG.StandaloneTestPO.submitOrder.executor": "Run",
+    "TestNG.TestNGTestRunner.executor": "Run",
+    "git-widget-placeholder": "SF__02__Allure__Retry",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Trainings/SeleniumFramework/testSuites",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
@@ -90,10 +94,20 @@
       <recent name="com.rbhatt.selenium" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestNGTestRunner">
+  <component name="RunManager" selected="TestNG.D:/Trainings/SeleniumFramework/testSuites/testngCucumber.xml">
     <configuration name="D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Trainings/SeleniumFramework/testSuites/testngCucumber.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/testngCucumber.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -121,23 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubmitOrderTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.SubmitOrderTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestNGTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <extension name="coverage">
@@ -157,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testngCucumber.xml" />
         <item itemvalue="TestNG.TestNGTestRunner" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
-        <item itemvalue="TestNG.SubmitOrderTest" />
       </list>
     </recent_temporary>
   </component>
