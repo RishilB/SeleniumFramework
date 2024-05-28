@@ -34,12 +34,12 @@
     &quot;assignee&quot;: &quot;RishilB&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:RishilB/SeleniumFramework.git",
-    "accountId": "c0f66e21-4b10-4a59-b2f7-94ba5c648cc6"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:RishilB/SeleniumFramework.git&quot;,
+    &quot;accountId&quot;: &quot;c0f66e21-4b10-4a59-b2f7-94ba5c648cc6&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
