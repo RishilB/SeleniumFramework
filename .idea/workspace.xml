@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="" />
+    <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/Retry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/Retry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/JsonDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/ErrorValidations.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/ErrorValidations.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/SubmitOrder.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/SubmitOrder.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +46,9 @@
     &quot;accountId&quot;: &quot;5acd7602-c891-473f-abfd-8ba487adb812&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -54,6 +68,7 @@
     "Application.StandaloneTest.executor": "Run",
     "Application.StandaloneTest1.executor": "Run",
     "Application.StandaloneTestPO.executor": "Run",
+    "Cucumber Java.Scenario: Positive Test for Submitting the Order.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor": "Run",
@@ -67,7 +82,7 @@
     "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
     "TestNG.StandaloneTestPO.submitOrder.executor": "Run",
     "TestNG.TestNGTestRunner.executor": "Run",
-    "git-widget-placeholder": "SF__02__Allure__Retry",
+    "git-widget-placeholder": "SF__04__Dataprovider__Cucumber",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Trainings/SeleniumFramework",
     "project.structure.last.edited": "Modules",
@@ -82,6 +97,7 @@
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Trainings\SeleniumFramework\src\test\java\com\rbhatt\selenium\data" />
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -89,6 +105,26 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.TestNGTestRunner">
+    <configuration name="Scenario: Positive Test for Submitting the Order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/cucumber/SubmitOrder.feature" />
+      <option name="GLUE" value="com.rbhatt.selenium.StepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="SeleniumFramework" />
+      <option name="NAME_FILTER" value="^Positive Test for Submitting the Order$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Positive Test for Submitting the Order$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Positive Test for Submitting the Order" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" />
@@ -119,23 +155,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubmitOrderTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="SeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.rbhatt.selenium.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.SubmitOrderTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestNGTestRunner" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumFramework" />
       <extension name="coverage">
@@ -156,10 +175,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestNGTestRunner" />
+        <item itemvalue="Cucumber Java.Scenario: Positive Test for Submitting the Order" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
-        <item itemvalue="TestNG.SubmitOrderTest" />
       </list>
     </recent_temporary>
   </component>

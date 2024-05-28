@@ -250,27 +250,66 @@
         </pluginManagement>
       </build>
     </profile>
-    <profile>
-      <id>CucumberTestErrorValidation</id>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-surefire-plugin</artifactId>
-              <version>3.2.5</version>
-              <configuration>
-                <includes>
-                  <include>**/TestNGTestRunner.java</include>
-                </includes>
-                <systemPropertyVariables>
-                  <cucumber.filter.tags>@ErrorValidations</cucumber.filter.tags>
-                </systemPropertyVariables>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
+      <profile>
+        <id>CucumberTestErrorValidation</id>
+        <build>
+          <pluginManagement>
+            <plugins>
+              <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                  <source>${maven.compiler.source.version}</source>
+                  <target>${maven.compiler.target.version}</target>
+                </configuration>
+              </plugin>
+              <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                  <!--                <includes>-->
+                  <!--                  <include>**/TestNGTestRunner.java</include>-->
+                  <!--                </includes>-->
+                  <testFailureIgnore>true</testFailureIgnore>
+                  <suiteXmlFiles>
+                    <suiteXmlFile>testSuites/testngCucumber.xml</suiteXmlFile>
+                  </suiteXmlFiles>
+                  <systemPropertyVariables>
+                    <cucumber.filter.tags>@ErrorValidations</cucumber.filter.tags>
+                    <allure.results.directory>target/allure-results</allure.results.directory>
+                  </systemPropertyVariables>
+                  <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                  </argLine>
+                </configuration>
+                <dependencies>
+                </dependencies>
+              </plugin>
+              <!-- Allure Maven Plugin -->
+              <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                <executions>
+                  <execution>
+                    <id>allure-report</id>
+                    <phase>verify</phase>
+                    <goals>
+                      <goal>report</goal>
+                    </goals>
+                    <configuration>
+                      <resultsDirectory>${allure.results.directory}</resultsDirectory>
+                      <reportDirectory>${allure.report.directory}</reportDirectory>
+                      <failIfNoResults>false</failIfNoResults>
+                    </configuration>
+                  </execution>
+                </executions>
+              </plugin>
+            </plugins>
+          </pluginManagement>
+        </build>
+      </profile>
   </profiles>
 </project>

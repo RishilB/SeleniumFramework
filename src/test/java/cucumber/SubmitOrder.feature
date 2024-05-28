@@ -11,6 +11,6 @@ Feature: Purchase the order from Ecommerce Website
     Then <confirmMessage> message is displayed on Confirmation Page
     And I should see the Order on Order History Page
     Examples:
-      | email                    | password  | productName     | confirmMessage |
-      | risshilbhatt@gmail.com   | Test@123  | ZARA COAT 3     | THANKYOU       |
-      | rishilbhatt.qa@gmail.com | Test@1234 | ADIDAS ORIGINAL | THANKYOU       |
+      | email   | password   | productName   | confirmMessage   |
+      | email_1 | password_1 | productName_1 | confirmMessage_1 |
+      | email_2 | password_2 | productName_2 | confirmMessage_2 |

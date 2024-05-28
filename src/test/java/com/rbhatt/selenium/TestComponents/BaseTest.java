@@ -3,6 +3,7 @@ package com.rbhatt.selenium.TestComponents;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbhatt.selenium.PageObjects.LandingPage;
+import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
@@ -15,6 +16,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
@@ -87,9 +90,14 @@ public abstract class BaseTest {
 		return landingPage;
 	}
 	
-	@AfterMethod(alwaysRun = true)
+	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		if (driver != null) {
+			System.out.println("Not Null");
+			driver.close();
+		}else{
+			System.out.println("Null");
+		}
 	}
 
 }

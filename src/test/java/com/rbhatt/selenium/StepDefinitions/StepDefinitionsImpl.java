@@ -2,6 +2,7 @@ package com.rbhatt.selenium.StepDefinitions;
 
 import com.rbhatt.selenium.PageObjects.*;
 import com.rbhatt.selenium.TestComponents.BaseTest;
+import com.rbhatt.selenium.data.PropertyFileReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,12 +16,17 @@ import java.util.List;
 
 public class StepDefinitionsImpl extends BaseTest {
 	
+	private final PropertyFileReader propertyFileReader;
 	public LandingPage landingPage;
 	public ProductCatalouge productCatalouge;
 	public CartPage cartPage;
 	public PlaceOrder placeOrder;
 	public OrdersHistory ordersHistory;
 	String orderID;
+	
+	public StepDefinitionsImpl() throws IOException {
+		propertyFileReader = new PropertyFileReader(System.getProperty("user.dir")+"//src//test//java/com//rbhatt//selenium//data//testdata.properties");
+	}
 	
 	@Given("I landed on the Ecommerce Page")
 	@Step("Navigate to the Ecommerce Login Page")
@@ -30,14 +36,16 @@ public class StepDefinitionsImpl extends BaseTest {
 	
 	@Given("^I Logged in with email (.+) and password (.+)$")
 	@Step("Login with valid credentials")
-	public void I_Logged_in_with_email_and_password(String email, String password){
+	public void I_Logged_in_with_email_and_password(String emailKey, String passwordKey){
+		String email = propertyFileReader.getProperty(emailKey);
+		String password = propertyFileReader.getProperty(passwordKey);
 		productCatalouge = landingPage.loginAction(email, password);
 	}
-
 	
 	@When("^I add product (.+) to the Cart$")
 	@Step("Add Product to the Cart")
-	public void I_add_product_to_the_Cart(String product){
+	public void I_add_product_to_the_Cart(String productKey){
+		String product = propertyFileReader.getProperty(productKey);
 		List<WebElement> productNames = productCatalouge.getProductList();
 		WebElement prod = productCatalouge.getProductByName(product);
 		productCatalouge.addToCart(prod);
@@ -45,7 +53,8 @@ public class StepDefinitionsImpl extends BaseTest {
 	
 	@And("^Checkout (.+) and submit the Order$")
 	@Step("Checkout Product & Submit Order")
-	public void Checkout_Product_and_submit_the_Order(String product){
+	public void Checkout_Product_and_submit_the_Order(String productKey){
+		String product = propertyFileReader.getProperty(productKey);
 		cartPage = productCatalouge.goToCart();
 		Boolean isAvailable = cartPage.isProductAvailable(product);
 		Assert.assertTrue(isAvailable);
@@ -55,7 +64,8 @@ public class StepDefinitionsImpl extends BaseTest {
 	
 	@Then("^(.+) message is displayed on Confirmation Page$")
 	@Step("Validate the Confirmation Message")
-	public void Confirmation_message_is_displayed_on_Confirmation_Page(String confirmationMessage){
+	public void Confirmation_message_is_displayed_on_Confirmation_Page(String confirmationMessageKey){
+		String confirmationMessage = propertyFileReader.getProperty(confirmationMessageKey);
 		String confirmMessage = placeOrder.getConfirmationMessage();
 		Assert.assertTrue(confirmMessage.contains(confirmationMessage));
 		orderID = placeOrder.getOrderID();
@@ -67,12 +77,12 @@ public class StepDefinitionsImpl extends BaseTest {
 		ordersHistory = productCatalouge.goToOrderHistory();
 		Boolean isOrderAvailable = ordersHistory.isOrderAvailable(orderID);
 		Assert.assertTrue(isOrderAvailable);
-		driver.quit();
 	}
-
-	@Then("^\"([^\"]*)\" message is displayed$")
+	
+	@Then("^(.+) message is displayed$")
 	@Step("Verify Login Error message is displayed")
-	public void Login_error_message_is_displayed(String errorMessage){
+	public void Login_error_message_is_displayed(String errorMessageKey){
+		String errorMessage = propertyFileReader.getProperty(errorMessageKey);
 		Assert.assertEquals(errorMessage,landingPage.getLoginErrorMessage());
 	}
 }
