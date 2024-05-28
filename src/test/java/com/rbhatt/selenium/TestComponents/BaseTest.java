@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbhatt.selenium.PageObjects.LandingPage;
 import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.Getter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -30,9 +31,10 @@ import java.util.List;
 import java.util.Properties;
 
 public abstract class BaseTest {
-	
-	public WebDriver driver;
+
+    public WebDriver driver;
 	public LandingPage landingPage;
+	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 	
 	public WebDriver initializeDriver() throws IOException {
 		
@@ -59,10 +61,15 @@ public abstract class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
-		return driver;
+		tdriver.set(driver);
+		return getDriver();
 	}
-	
-	public List<HashMap<String, String>> getJsonDataToMap(String fileName) throws IOException {
+
+	public static synchronized WebDriver getDriver(){
+		return tdriver.get();
+	}
+
+    public List<HashMap<String, String>> getJsonDataToMap(String fileName) throws IOException {
 		
 		// Read the Json File and convert to String
 		String jsonContent = FileUtils.readFileToString(new File(fileName),
