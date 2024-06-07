@@ -86,7 +86,6 @@ public abstract class BaseTest {
 		File file = new File(System.getProperty("user.dir")+"//reports//"+testCaseName+".png");
 		FileUtils.copyFile(source, file);
 		return System.getProperty("user.dir")+"//reports//"+testCaseName+".png";
-		
 	}
 	
 	@BeforeMethod(alwaysRun = true)

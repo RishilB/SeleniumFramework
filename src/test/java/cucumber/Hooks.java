@@ -25,9 +25,8 @@ public class Hooks extends BaseTest {
 			// Capture and attach screenshot to Allure report
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			Allure.addAttachment("Screenshot", new ByteArrayInputStream(screenshot));
+			Allure.addAttachment(scenario.getName(), new ByteArrayInputStream(screenshot));
 		}
 		driver.quit();
 	}
 }
-

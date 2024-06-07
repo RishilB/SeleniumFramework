@@ -36,8 +36,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:RishilB/SeleniumFramework.git&quot;,
-    &quot;accountId&quot;: &quot;c0f66e21-4b10-4a59-b2f7-94ba5c648cc6&quot;
+    &quot;url&quot;: &quot;https://github.com/RishilB/SeleniumFramework.git&quot;,
+    &quot;accountId&quot;: &quot;5acd7602-c891-473f-abfd-8ba487adb812&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
@@ -57,34 +57,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.StandaloneTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTest1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Positive Test for Submitting the Order.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidations.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidationsTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.orderHistoryPage.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.standaloneTest.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.submitOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestNGTestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SF__03__Allure__Attach__Failed__Screenshot&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Trainings/SeleniumFramework&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DemoBlaze.executor": "Run",
+    "Application.StandaloneTest.executor": "Run",
+    "Application.StandaloneTest1.executor": "Run",
+    "Application.StandaloneTestPO.executor": "Run",
+    "Application.magentoDemo.executor": "Run",
+    "Cucumber Java.Scenario: Positive Test for Submitting the Order.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor": "Run",
+    "TestNG.ErrorValidations.executor": "Run",
+    "TestNG.ErrorValidationsTest.executor": "Run",
+    "TestNG.StandaloneTestPO.executor": "Run",
+    "TestNG.StandaloneTestPO.orderHistoryPage.executor": "Debug",
+    "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
+    "TestNG.StandaloneTestPO.submitOrder.executor": "Run",
+    "TestNG.TestNGTestRunner.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Trainings/SeleniumFramework",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Trainings\SeleniumFramework" />
@@ -98,20 +100,13 @@
       <recent name="com.rbhatt.selenium" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestNGTestRunner">
-    <configuration name="Scenario: Positive Test for Submitting the Order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/cucumber/SubmitOrder.feature" />
-      <option name="GLUE" value="com.rbhatt.selenium.StepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+  <component name="RunManager" selected="Application.magentoDemo">
+    <configuration name="magentoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.magentoDemo" />
       <module name="SeleniumFramework" />
-      <option name="NAME_FILTER" value="^Positive Test for Submitting the Order$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Positive Test for Submitting the Order$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Positive Test for Submitting the Order" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.magentoDemo" />
         <item itemvalue="TestNG.TestNGTestRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Positive Test for Submitting the Order" />
+        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
-        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
       </list>
     </recent_temporary>
   </component>
