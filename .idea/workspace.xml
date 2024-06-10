@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.DemoBlaze.executor": "Run",
+    "Application.FileUpload.executor": "Run",
     "Application.StandaloneTest.executor": "Run",
     "Application.StandaloneTest1.executor": "Run",
     "Application.StandaloneTestPO.executor": "Run",
@@ -93,6 +91,7 @@
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Trainings\SeleniumFramework\src\test\java\com\rbhatt\selenium\tests" />
       <recent name="D:\Trainings\SeleniumFramework\src\test\java\com\rbhatt\selenium\data" />
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
@@ -100,9 +99,9 @@
       <recent name="com.rbhatt.selenium" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.magentoDemo">
-    <configuration name="magentoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.magentoDemo" />
+  <component name="RunManager" selected="Application.DemoBlaze">
+    <configuration name="DemoBlaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.DemoBlaze" />
       <module name="SeleniumFramework" />
       <extension name="coverage">
         <pattern>
@@ -114,22 +113,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FileUpload" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.TestComponents.FileUpload" />
       <module name="SeleniumFramework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/PurchaseOrder.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbhatt.selenium.TestComponents.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="D:/Trainings/SeleniumFramework/testSuites/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="magentoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rbhatt.selenium.tests.magentoDemo" />
       <module name="SeleniumFramework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testSuites/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbhatt.selenium.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DemoBlaze" />
+        <item itemvalue="Application.FileUpload" />
         <item itemvalue="Application.magentoDemo" />
         <item itemvalue="TestNG.TestNGTestRunner" />
         <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testng.xml" />
-        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml" />
-        <item itemvalue="TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml" />
       </list>
     </recent_temporary>
   </component>
