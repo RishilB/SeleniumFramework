@@ -5,53 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/1021a0e5-cae9-4205-8fe7-d2d19acf972a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/1285ec4c-11cb-41cc-b169-0366f4731822-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2411e2b2-18b9-466d-bc1c-1eca3c93c383-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/27d32126-c627-4d37-ba7e-5095251ac062-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/29b02308-cc35-482e-98a3-4dc0094ebaf6-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/449c36e9-4ba2-452b-a12b-976fd6614e2d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/4e60ace3-160d-499c-9c1a-52f287204ff7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/5056b413-e625-4276-a220-c886db7c95c5-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/5a40d28b-f80d-439d-b981-85b2c949f1ec-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/676ce9a3-da58-4212-a0c8-e009d033c8a6-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/70ad8447-d4ec-493c-b717-c94b5b23d754-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/73631db5-1f30-49ba-8f7a-07ae1e45fc85-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/7b10d2c4-b656-4760-8656-55717c604708-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/7b9c21ec-d93c-4546-acf5-fe13c951854a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/814a6b16-664e-4531-b5f6-4b2699bf90ad-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8d2dd6d9-07b4-4a59-8115-53d6a5018aed-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8e247840-5e05-4e80-a6cb-b0846a345841-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8ef3c7eb-64c6-47d7-beb9-8fd7d75f219d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/926aa0ed-7ab5-41d8-8f69-572cc11ce998-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9a7bb863-b87e-45cf-a15a-511138fc52dc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9e608c35-2fde-4832-ba24-13697356ac7a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/9f8a47e7-fbaf-49dc-90db-83396a4446d1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a3f8cfe7-3cf5-4dcb-a72f-e1518600047b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a77661fa-3757-47c2-a742-f3413548a9af-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/aa7c3d21-79a5-4a7c-88ea-1e0a3841dfc9-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/acb33acb-dd81-440f-b7ac-04428f3221e0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/b56004bc-5791-4b96-af37-6998092d5c07-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/c7c088cc-f7a3-4616-a6a6-2f5bdb8c60d4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/cbaece0e-0bfd-491d-84a7-de338e4b1401-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/ce3d6e1b-5b86-4ff6-926c-feb8b23e39ad-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/d1713e84-6f38-46db-9ec5-38789d025dbf-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/db740c7c-3548-4d6d-aff0-98d0bbf0065f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e1fae029-d034-41d9-96a7-04a56ea395e0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/eb44f32a-1f8d-49cd-874a-322cd49d824b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/edfbe0ee-736f-422b-b430-145998d7aa75-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f2e39776-b3fa-4700-9176-f16cbe155ee9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f4ed5fcc-ceab-4d33-be63-0e1981fea228-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/f745eff1-d4f6-4758-967d-eef7f42cfea6-container.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/PlaceOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/PlaceOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/fileUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/testdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/ErrorValidations.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/ErrorValidations.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/TestNGTestRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
