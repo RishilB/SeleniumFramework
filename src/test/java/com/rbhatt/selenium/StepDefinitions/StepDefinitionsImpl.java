@@ -25,7 +25,7 @@ public class StepDefinitionsImpl extends BaseTest {
 	String orderID;
 	
 	public StepDefinitionsImpl() throws IOException {
-		propertyFileReader = new PropertyFileReader(System.getProperty("user.dir")+"//src//test//java/com//rbhatt//selenium//data//testdata.properties");
+		propertyFileReader = new PropertyFileReader(System.getProperty("user.dir")+"//src//test//java//com//rbhatt//selenium//data//testdata.properties");
 	}
 	
 	@Given("I landed on the Ecommerce Page")

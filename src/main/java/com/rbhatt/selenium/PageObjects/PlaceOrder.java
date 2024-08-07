@@ -2,6 +2,7 @@ package com.rbhatt.selenium.PageObjects;
 
 import com.rbhatt.selenium.AbstractCompoments.AbstractComponent;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,8 +20,8 @@ public class PlaceOrder extends AbstractComponent {
     @FindBy(xpath = "//div[@class='form-group']/section/button")
     List<WebElement> countries;
 
-    @FindBy(xpath = "//div[@class='actions']/a")
-    WebElement placeOrder;
+    @FindBy(css = ".action__submit")
+    WebElement placeOrderButton;
 
     @FindBy(css = ".hero-primary")
     WebElement confirmationMessageEle;
@@ -36,7 +37,7 @@ public class PlaceOrder extends AbstractComponent {
     }
 
     public void placeOrder(){
-        country.sendKeys("Ind");
+        country.sendKeys("Indo");
         waitForElementToAppear(countriesEle);
         for(WebElement country : countries){
             if(country.getText().equalsIgnoreCase("Indonesia")){
@@ -44,7 +45,9 @@ public class PlaceOrder extends AbstractComponent {
                 break;
             }
         }
-        placeOrder.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", placeOrderButton);
+        placeOrderButton.click();
     }
 
     public String getConfirmationMessage(){
