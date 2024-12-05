@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbhatt.selenium.PageObjects.LandingPage;
 import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import lombok.Getter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
