@@ -1,6 +1,5 @@
 Feature: Error Validation
 
-  @Regression
   @ErrorValidations
   Scenario Outline: Error Validation Test with incorrect Email & Password
     Given I landed on the Ecommerce Page

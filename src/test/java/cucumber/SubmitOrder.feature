@@ -13,4 +13,3 @@ Feature: Purchase the order from Ecommerce Website
     Examples:
       | email   | password   | productName   | confirmMessage   |
       | email_1 | password_1 | productName_1 | confirmMessage_1 |
-      | email_2 | password_2 | productName_2 | confirmMessage_2 |

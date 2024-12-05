@@ -37,17 +37,17 @@ public class PlaceOrder extends AbstractComponent {
     }
 
     public void placeOrder(){
-        country.sendKeys("Indo");
+        sendKeys(country,"Indo");
         waitForElementToAppear(countriesEle);
         for(WebElement country : countries){
             if(country.getText().equalsIgnoreCase("Indonesia")){
-                country.click();
+                click(country);
                 break;
             }
         }
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", placeOrderButton);
-        placeOrderButton.click();
+        scrollToElement(placeOrderButton);
+        waitForWebElementToVisible(placeOrderButton);
+        click(placeOrderButton);
     }
 
     public String getConfirmationMessage(){

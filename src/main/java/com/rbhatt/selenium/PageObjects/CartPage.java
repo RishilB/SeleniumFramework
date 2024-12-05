@@ -29,7 +29,8 @@ public class CartPage extends AbstractComponent {
 	}
 
 	public PlaceOrder checkout(){
-		checkoutBtn.click();
+		scrollToElement(checkoutBtn);
+		click(checkoutBtn);
 		return new PlaceOrder(driver);
 	}
 }
