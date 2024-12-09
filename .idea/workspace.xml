@@ -6,15 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/resources/GlobalData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GlobalData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/Base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/StepDefinitions/StepDefinitionsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/PropertyFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/utils/PropertyFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/PurchaseOrder.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/resources/PurchaseOrder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/data/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/resources/testdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/ErrorValidationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/ErrorValidationsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/SubmitOrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/tests/SubmitOrderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/Retry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/TestComponents/Retry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/resources/PurchaseOrder.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/PurchaseOrder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/resources/testdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,11 +103,11 @@
       <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Automation\SeleniumFramework\src\test" />
       <recent name="D:\Automation\SeleniumFramework\src\test\java\com\rbhatt\selenium\resources" />
       <recent name="D:\Automation\SeleniumFramework\src\main\" />
       <recent name="D:\Trainings\SeleniumFramework\src\test\java\com\rbhatt\selenium\tests" />
       <recent name="D:\Trainings\SeleniumFramework\src\test\java\com\rbhatt\selenium\data" />
-      <recent name="D:\Trainings\SeleniumFramework\testSuites" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.rbhatt.selenium.data" />
