@@ -1,4 +1,4 @@
-package com.rbhatt.selenium.data;
+package com.rbhatt.selenium.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

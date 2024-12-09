@@ -1,6 +1,6 @@
 package com.rbhatt.selenium.tests;
 
-import com.rbhatt.selenium.TestComponents.BaseTest;
+import com.rbhatt.selenium.Base.BaseTest;
 import com.rbhatt.selenium.TestComponents.Retry;
 import org.testng.Assert;
 import org.testng.annotations.Test;

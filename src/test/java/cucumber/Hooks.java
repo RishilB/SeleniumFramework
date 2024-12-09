@@ -1,10 +1,9 @@
 package cucumber;
 
-import com.rbhatt.selenium.TestComponents.BaseTest;
+import com.rbhatt.selenium.Base.BaseTest;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
+
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.logging.Logger;
 import io.cucumber.java.Scenario;

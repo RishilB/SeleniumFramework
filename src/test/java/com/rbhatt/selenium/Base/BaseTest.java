@@ -1,9 +1,8 @@
-package com.rbhatt.selenium.TestComponents;
+package com.rbhatt.selenium.Base;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbhatt.selenium.PageObjects.LandingPage;
-import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
@@ -14,10 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;

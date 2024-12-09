@@ -1,8 +1,8 @@
 package com.rbhatt.selenium.StepDefinitions;
 
 import com.rbhatt.selenium.PageObjects.*;
-import com.rbhatt.selenium.TestComponents.BaseTest;
-import com.rbhatt.selenium.data.PropertyFileReader;
+import com.rbhatt.selenium.Base.BaseTest;
+import com.rbhatt.selenium.utils.PropertyFileReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

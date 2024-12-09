@@ -1,7 +1,7 @@
 package com.rbhatt.selenium.tests;
 
 import com.rbhatt.selenium.PageObjects.*;
-import com.rbhatt.selenium.TestComponents.BaseTest;
+import com.rbhatt.selenium.Base.BaseTest;
 import com.rbhatt.selenium.TestComponents.Retry;
 import org.openqa.selenium.*;
 import org.testng.Assert;
