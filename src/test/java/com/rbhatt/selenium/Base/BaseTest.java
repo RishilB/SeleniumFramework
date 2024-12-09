@@ -3,6 +3,7 @@ package com.rbhatt.selenium.Base;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbhatt.selenium.PageObjects.LandingPage;
+import com.rbhatt.selenium.utils.PropertyFileReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
@@ -29,21 +30,23 @@ public abstract class BaseTest {
 
     public WebDriver driver;
 	public LandingPage landingPage;
+    PropertyFileReader propertyFileReader;
 	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 	
 	public WebDriver initializeDriver() throws IOException {
-		
-		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//resources//GlobalData.properties");
-		prop.load(fis);
-		
-		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
-		
+
+		propertyFileReader = new PropertyFileReader("src/main/resources/GlobalData.properties");
+        String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : propertyFileReader.getProperty("browser");
+		boolean isHeadless = Boolean.parseBoolean(propertyFileReader.getProperty("headless"));
+		boolean maximizeWindow = Boolean.parseBoolean(propertyFileReader.getProperty("maximizeWindow"));
+		int implicitWait = Integer.parseInt(propertyFileReader.getProperty("implicitWait"));
+
 		if(browserName.contains("chrome")){
 			ChromeOptions options = new ChromeOptions();
 			WebDriverManager.chromedriver().setup();
-			if(browserName.contains("headless")){
+			if(isHeadless){
 				options.addArguments("headless");
+				options.addArguments("--disable-gpu");
 			}
 			driver = new ChromeDriver(options);
 			driver.manage().window().setSize(new Dimension(1440,900));
@@ -54,8 +57,10 @@ public abstract class BaseTest {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+		if (maximizeWindow && !isHeadless) {
+			driver.manage().window().maximize();
+		}
 		tdriver.set(driver);
 		return getDriver();
 	}

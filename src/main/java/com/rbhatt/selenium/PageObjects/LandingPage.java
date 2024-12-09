@@ -1,11 +1,17 @@
 package com.rbhatt.selenium.PageObjects;
 
 import com.rbhatt.selenium.AbstractCompoments.AbstractComponent;
+import com.rbhatt.selenium.utils.PropertyFileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
 
+import java.io.IOException;
+
 public class LandingPage extends AbstractComponent {
+
+	private final String baseUrl;
+	PropertyFileReader propertyFileReader;
 	
 	@FindBy(id="userEmail")
 	WebElement userEmailEle;
@@ -24,10 +30,16 @@ public class LandingPage extends AbstractComponent {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
+		try {
+			propertyFileReader = new PropertyFileReader("src/main/resources/GlobalData.properties");
+			this.baseUrl = propertyFileReader.getProperty("baseUrl");
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to load base URL from GlobalData.properties", e);
+		}
+    }
 	
 	public void goTo(){
-		driver.get("https://rahulshettyacademy.com/client");
+		driver.get(baseUrl);
 	}
 
 	public ProductCatalouge loginAction(String email, String password){
