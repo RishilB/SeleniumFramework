@@ -3,6 +3,7 @@ package com.rbhatt.selenium.Base;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rbhatt.selenium.PageObjects.LandingPage;
+import com.rbhatt.selenium.utils.BrowserFarmManager;
 import com.rbhatt.selenium.utils.PropertyFileReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
@@ -35,31 +36,42 @@ public abstract class BaseTest {
 	
 	public WebDriver initializeDriver() throws IOException {
 
+		// Load properties using PropertyFileReade
 		propertyFileReader = new PropertyFileReader("src/main/resources/GlobalData.properties");
-        String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : propertyFileReader.getProperty("browser");
-		boolean isHeadless = Boolean.parseBoolean(propertyFileReader.getProperty("headless"));
-		boolean maximizeWindow = Boolean.parseBoolean(propertyFileReader.getProperty("maximizeWindow"));
-		int implicitWait = Integer.parseInt(propertyFileReader.getProperty("implicitWait"));
 
-		if(browserName.contains("chrome")){
-			ChromeOptions options = new ChromeOptions();
-			WebDriverManager.chromedriver().setup();
-			if(isHeadless){
-				options.addArguments("headless");
-				options.addArguments("--disable-gpu");
+		// Determine where to run the tests
+		String runOn = propertyFileReader.getProperty("runOn");
+
+		if(runOn.equalsIgnoreCase("local")){
+			String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : propertyFileReader.getProperty("browser");
+			boolean isHeadless = Boolean.parseBoolean(propertyFileReader.getProperty("headless"));
+			boolean maximizeWindow = Boolean.parseBoolean(propertyFileReader.getProperty("maximizeWindow"));
+			int implicitWait = Integer.parseInt(propertyFileReader.getProperty("implicitWait"));
+			if(browserName.contains("chrome")){
+				ChromeOptions options = new ChromeOptions();
+				WebDriverManager.chromedriver().setup();
+				if(isHeadless){
+					options.addArguments("headless");
+					options.addArguments("--disable-gpu");
+				}
+				driver = new ChromeDriver(options);
+				driver.manage().window().setSize(new Dimension(1440,900));
+			}else if(browserName.equalsIgnoreCase("firefox")){
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+			}else if(browserName.equalsIgnoreCase("edge")){
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
 			}
-			driver = new ChromeDriver(options);
-			driver.manage().window().setSize(new Dimension(1440,900));
-		}else if(browserName.equalsIgnoreCase("firefox")){
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		}else if(browserName.equalsIgnoreCase("edge")){
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-		}
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
-		if (maximizeWindow && !isHeadless) {
-			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+			if (maximizeWindow && !isHeadless) {
+				driver.manage().window().maximize();
+			}
+		}else if(runOn.equalsIgnoreCase("browserfarm")){
+			BrowserFarmManager browserFarmManager = new BrowserFarmManager(propertyFileReader);
+			driver = browserFarmManager.getRemoteWebDriver();
+		}else{
+			throw new RuntimeException("Unsupported runOn value:"+ runOn);
 		}
 		tdriver.set(driver);
 		return getDriver();
