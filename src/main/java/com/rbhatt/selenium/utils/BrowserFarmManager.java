@@ -31,8 +31,6 @@ public class BrowserFarmManager {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
         capabilities.setCapability("browserVersion", browserVersion);
-        capabilities.setCapability("os", os);
-        capabilities.setCapability("os_version", osVersion);
 
         // Add additional capabilities dynamically based on the browser farm
         switch (browserFarm.toLowerCase()) {
@@ -42,10 +40,14 @@ public class BrowserFarmManager {
                         "osVersion", osVersion,
                         "resolution", resolution,
                         "userName", username,
-                        "accessKey", accessKey,
-                        "browserstack.video", videoRecording,
-                        "browserstack.networkLogs", networkLogs
+                        "accessKey", accessKey
                 );
+                if (videoRecording) {
+                    bstackOptions.put("debug", true); // Enables debugging and video recording
+                }
+                if (networkLogs) {
+                    bstackOptions.put("networkLogs", true); // Captures network logs
+                }
                 capabilities.setCapability("bstack:options", bstackOptions);
                 break;
 
@@ -59,6 +61,8 @@ public class BrowserFarmManager {
                 if (resolution != null && !resolution.isEmpty()) {
                     capabilities.setCapability("screenResolution", resolution);
                 }
+                capabilities.setCapability("os", os);
+                capabilities.setCapability("os_version", osVersion);
                 break;
 
             case "lambdatest":
@@ -71,6 +75,8 @@ public class BrowserFarmManager {
                 if (resolution != null && !resolution.isEmpty()) {
                     capabilities.setCapability("resolution", resolution);
                 }
+                capabilities.setCapability("os", os);
+                capabilities.setCapability("os_version", osVersion);
                 break;
 
             default:
