@@ -20,6 +20,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import com.rbhatt.selenium.TestComponents.Retry;
 
 public class Hooks extends BaseTest {
 	
@@ -52,13 +53,17 @@ public class Hooks extends BaseTest {
 	@Before
 	public void beforeScenario(Scenario scenario) {
 		try {
-			// Load the video recording flag from the property file
-			//recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
-
-			// Start recording if the flag is set to "On"
-			if (!isHeadless && "On".equalsIgnoreCase(recordVideoFlag)) {
-				videoRecorder.startRecording(scenario.getName().replaceAll(" ", "_"));
-				logger.info("Video recording started for scenario: " + scenario.getName());
+			// Start recording based on recordVideo flag and headless mode
+			if (!isHeadless) {
+				if ("On".equalsIgnoreCase(recordVideoFlag)) {
+					videoRecorder.startRecording(scenario.getName().replaceAll(" ", "_"));
+					logger.info("Video recording started for scenario: " + scenario.getName());
+				} else if ("onFailure".equalsIgnoreCase(recordVideoFlag) && Retry.isRetryMode()) {
+					videoRecorder.startRecording(scenario.getName().replaceAll(" ", "_")+" Retried");
+					logger.info("Video recording started for retry scenario: " + scenario.getName());
+				}
+			} else {
+				logger.info("Video recording skipped due to headless mode.");
 			}
 		} catch (Exception e) {
 			logger.severe("Failed to start video recording: " + e.getMessage());
@@ -69,14 +74,15 @@ public class Hooks extends BaseTest {
 	public void afterScenario(Scenario scenario) {
 		WebDriver driver = BaseTest.getDriver();
 		try {
-			// Load the video recording flag from the property file
-			//recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
-
-			if (!isHeadless && "On".equalsIgnoreCase(recordVideoFlag)) {
-				// Wait a few seconds before stopping the recording
-				//Thread.sleep(3000); // Adjust the delay as needed
-				videoRecorder.stopRecording();
-				System.out.println("Video recording stopped for scenario: " + scenario.getName());
+			// Stop recording based on recordVideo flag and retry mode
+			if (!isHeadless) {
+				if ("On".equalsIgnoreCase(recordVideoFlag)) {
+					videoRecorder.stopRecording();
+					logger.info("Video recording stopped for scenario: " + scenario.getName());
+				} else if ("onFailure".equalsIgnoreCase(recordVideoFlag) && Retry.isRetryMode()) {
+					videoRecorder.stopRecording();
+					logger.info("Video recording stopped for retry scenario: " + scenario.getName());
+				}
 			}
 
 			// Capture and attach the screenshot to Allure report for failed scenarios
