@@ -7,6 +7,7 @@ import io.cucumber.java.After;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Objects;
 import java.util.logging.Logger;
@@ -24,9 +25,18 @@ public class Hooks extends BaseTest {
 	
 	private static final Logger logger = Logger.getLogger(Hooks.class.getName());
 	private final VideoRecorder videoRecorder = new VideoRecorder();
-	private String recordVideoFlag;
+	boolean isHeadless;
+	String recordVideoFlag;
+    {
+        try {
+            isHeadless = Boolean.parseBoolean(new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("headless"));
+			recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-	@BeforeAll(order = 0)
+    @BeforeAll(order = 0)
 	public static void cleanVideosFolder(){
 		File videosDir = new File("videos");
 		if (videosDir.exists() && videosDir.isDirectory()) {
@@ -43,10 +53,10 @@ public class Hooks extends BaseTest {
 	public void beforeScenario(Scenario scenario) {
 		try {
 			// Load the video recording flag from the property file
-			recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
+			//recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
 
 			// Start recording if the flag is set to "On"
-			if ("On".equalsIgnoreCase(recordVideoFlag)) {
+			if (!isHeadless && "On".equalsIgnoreCase(recordVideoFlag)) {
 				videoRecorder.startRecording(scenario.getName().replaceAll(" ", "_"));
 				logger.info("Video recording started for scenario: " + scenario.getName());
 			}
@@ -60,9 +70,9 @@ public class Hooks extends BaseTest {
 		WebDriver driver = BaseTest.getDriver();
 		try {
 			// Load the video recording flag from the property file
-			recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
+			//recordVideoFlag = new PropertyFileReader("src/main/resources/GlobalData.properties").getProperty("recordVideo");
 
-			if ("On".equalsIgnoreCase(recordVideoFlag)) {
+			if (!isHeadless && "On".equalsIgnoreCase(recordVideoFlag)) {
 				// Wait a few seconds before stopping the recording
 				//Thread.sleep(3000); // Adjust the delay as needed
 				videoRecorder.stopRecording();

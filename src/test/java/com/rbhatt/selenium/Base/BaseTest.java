@@ -31,7 +31,7 @@ public abstract class BaseTest {
 
     public WebDriver driver;
 	public LandingPage landingPage;
-    PropertyFileReader propertyFileReader;
+    protected PropertyFileReader propertyFileReader;
 	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 	
 	public WebDriver initializeDriver() throws IOException {
