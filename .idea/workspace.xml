@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/utils/BrowserFarmManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/utils/BrowserFarmManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/LandingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/GlobalData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GlobalData.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/Base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
     &quot;TestNG.StandaloneTestPO.submitOrder.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.SubmitOrderTest.submitOrder.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.TestNGTestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Add-Browser-Farms-Support&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;video-recording-with-retry-support&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Trainings/SeleniumFramework&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,

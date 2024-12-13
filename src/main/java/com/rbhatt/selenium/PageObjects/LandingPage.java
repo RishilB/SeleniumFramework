@@ -40,6 +40,7 @@ public class LandingPage extends AbstractComponent {
 	
 	public void goTo(){
 		driver.get(baseUrl);
+		waitForPageLoadComplete(10);
 	}
 
 	public ProductCatalouge loginAction(String email, String password){

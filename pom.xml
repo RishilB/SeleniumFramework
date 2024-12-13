@@ -28,6 +28,7 @@
     <allure.maven>2.12.0</allure.maven>
     <gherkin.version>28.0.0</gherkin.version>
     <aspectj.version>1.9.22</aspectj.version>
+    <monte.version>0.7.7.0</monte.version>
     <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
     <allure.report.directory>${project.build.directory}/allure-report</allure.report.directory>
   </properties>
@@ -116,6 +117,13 @@
       <artifactId>aspectjweaver</artifactId>
       <version>${aspectj.version}</version>
       <scope>runtime</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.stephenc.monte/monte-screen-recorder -->
+    <dependency>
+      <groupId>com.github.stephenc.monte</groupId>
+      <artifactId>monte-screen-recorder</artifactId>
+      <version>${monte.version}</version>
     </dependency>
 
   </dependencies>
