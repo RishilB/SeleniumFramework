@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0207d9f5-8950-4e9e-8efe-5eb93b931bb8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/PageObjects/LandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GlobalData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GlobalData.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cucumber/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/rbhatt/selenium/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rbhatt/selenium/Base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,44 +56,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DemoBlaze.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FileUpload.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTest1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.magentoDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Cucumber Java.Scenario: Positive Test for Submitting the Order.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Cucumber Regression Test.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.SeleniumFramework [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.SeleniumFramework [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.SeleniumFramework [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.SeleniumFramework [validate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidations.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.ErrorValidationsTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.StandaloneTestPO.orderHistoryPage.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.standaloneTest.executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.StandaloneTestPO.submitOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SubmitOrderTest.submitOrder.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestNGTestRunner.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;video-recording-with-retry-support&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Trainings/SeleniumFramework&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DemoBlaze.executor": "Run",
+    "Application.FileUpload.executor": "Run",
+    "Application.StandaloneTest.executor": "Run",
+    "Application.StandaloneTest1.executor": "Run",
+    "Application.StandaloneTestPO.executor": "Run",
+    "Application.magentoDemo.executor": "Run",
+    "Cucumber Java.Scenario: Positive Test for Submitting the Order.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.Cucumber Regression Test.executor": "Run",
+    "Maven.SeleniumFramework [clean].executor": "Run",
+    "Maven.SeleniumFramework [compile].executor": "Run",
+    "Maven.SeleniumFramework [test].executor": "Run",
+    "Maven.SeleniumFramework [validate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/ErrorValidations.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/PurchaseOrder.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testSuites/testng.xml.executor": "Run",
+    "TestNG.D:/Trainings/SeleniumFramework/testng.xml.executor": "Run",
+    "TestNG.ErrorValidations.executor": "Run",
+    "TestNG.ErrorValidationsTest.executor": "Run",
+    "TestNG.StandaloneTestPO.executor": "Run",
+    "TestNG.StandaloneTestPO.orderHistoryPage.executor": "Debug",
+    "TestNG.StandaloneTestPO.standaloneTest.executor": "Debug",
+    "TestNG.StandaloneTestPO.submitOrder.executor": "Run",
+    "TestNG.SubmitOrderTest.submitOrder.executor": "Run",
+    "TestNG.TestNGTestRunner.executor": "Run",
+    "git-widget-placeholder": "Add-Feature-API-Testing-RestAssured",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Automation/SeleniumFramework/src/main/java/com/rbhatt/selenium",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Trainings\SeleniumFramework" />
