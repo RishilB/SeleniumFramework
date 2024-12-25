@@ -7,7 +7,7 @@
     </groups>
     <test thread-count="5" name="Error Validations">
         <classes>
-            <class name="com.rbhatt.selenium.tests.ErrorValidationsTest"/>
+            <class name="com.rbhatt.selenium.tests.ui.ErrorValidationsTest"/>
         </classes>
     </test>
 </suite>

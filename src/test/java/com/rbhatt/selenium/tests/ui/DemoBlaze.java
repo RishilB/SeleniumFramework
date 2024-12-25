@@ -1,4 +1,4 @@
-package com.rbhatt.selenium.tests;
+package com.rbhatt.selenium.tests.ui;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
