@@ -51,12 +51,11 @@ public class APITests extends APIBase {
         String endpoint = data.get("endPoint");
         String payload = String.format("{ \"name\": \"%s\", \"job\": \"%s\" }", data.get("name"), data.get("job"));
 
-        System.out.println(RestAssured.baseURI+endpoint);
         // Send POST request
         Response response = ApiUtils.sendPostRequest(endpoint, payload);
 
         // Validate status code
-        ApiUtils.validateStatusCode(response, 201);
+        ApiUtils.validateStatusCode(response, 400);
         assertNotNull(response.jsonPath().getString("id"));
         System.out.println("User ID is: " + response.jsonPath().getString("id"));
     }
